@@ -1,5 +1,6 @@
+// src/config.js
 const config = {
-    url: "http://localhost:2030/storeapibackend"
-}
+  url: import.meta.env.VITE_API_URL
+};
 
 export default config;

@@ -30,8 +30,8 @@ jobs:
       - name: Build and Push Backend Image
         uses: docker/build-push-action@v6
         with:
-          context: ./springbootbackend
-          file: ./springbootbackend/backend.Dockerfile
+          context: ./STOREAPI-BACKEND
+          file: ./STOREAPI-BACKEND/backend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USER }}/ansible-backend:latest
 
@@ -39,7 +39,7 @@ jobs:
       - name: Build and Push Frontend Image
         uses: docker/build-push-action@v6
         with:
-          context: ./reactfrontend
-          file: ./reactfrontend/frontend.Dockerfile
+          context: ./STOREAPI-FRONTEND
+          file: ./STOREAPI-FRONTEND/frontend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USER }}/ansible-frontend:latest
